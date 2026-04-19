@@ -2,15 +2,6 @@ from . import views
 
 
 class SectionFallbackMiddleware:
-    """
-    Якщо користувач відкрив неправильну адресу всередині відомого розділу,
-    замість 404 повертаємо головну сторінку цього розділу.
-
-    Приклади:
-    /news/heyjude -> /news/
-    /management/test -> /management/
-    /branches/unknown -> /branches/
-    """
 
     SECTION_VIEWS = {
         "news": views.news,
